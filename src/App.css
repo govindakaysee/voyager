@@ -28,6 +28,35 @@
   color: #61dafb;
 }
 
+.font-bold {
+  font-weight: bold;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  width: 50%;
+  margin-bottom: 50px;
+}
+
+.nav-item {
+  cursor: pointer;
+  background-color: cadetblue;
+  flex: 1;
+  border: solid thin #dddddd;
+  padding: 8px;
+}
+
+.nav-item:hover {
+  background-color: rgb(158, 94, 41);
+}
+
+.nav-item-selected{
+  font-weight: bold;
+  background-color: rgb(158, 94, 41);
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
