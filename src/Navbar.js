@@ -1,23 +1,39 @@
+import { NavBarItem } from './NavBarItem';
+
+const menus = [
+    {
+        name: 'home',
+        text: 'Home'
+    },
+    {
+        name: 'services',
+        text: 'Services',
+    },
+    {
+        name: 'about',
+        text: 'About',
+    },
+    {
+        name: 'contact',
+        text: 'Contact Us',
+    }
+];
+
 export function NavBar(props) {
-    
     return (
         <nav className="nav-menu">
-            <div
-                className={`nav-item ${props.currPage === "home" ? "nav-item-selected"  : null }`}
-                onClick={() => props.setCurrPage("home")}
-            >Home</div>
-            <div
-                className={`nav-item ${props.currPage === "services" ? "nav-item-selected"  : null }`}
-                onClick={() => props.setCurrPage("services")}
-            >Services</div>
-            <div 
-                className={`nav-item ${props.currPage === "about" ? "nav-item-selected"  : null }`}
-                onClick={()=> props.setCurrPage("about")}
-            >About</div>
-            <div 
-                className={`nav-item ${props.currPage === "contact" ? "nav-item-selected"  : null }`}
-                onClick={()=>props.setCurrPage("contact")}
-            >Contact Us</div>
+            {
+                menus.map((menu) => {
+                    return (
+                        <NavBarItem 
+                            menu={menu}
+                            setCurrPage={props.setCurrPage}
+                            currPage={props.currPage}
+                            key={menu.name}
+                        />
+                    );
+                })
+            }
         </nav>
     );
 }
