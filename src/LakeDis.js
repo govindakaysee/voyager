@@ -1,10 +1,10 @@
-export function Home(){
+export function LakeDis(){
     return (
         <div className = "Lakes-Description">
             <div className = "Lake-Hubbard">
                 <h1>  Lake Ray Hubbard </h1>
                 <h2> Location: Northeast Dallas</h2>
-        -       <p> 
+               <p> 
                     It is also known as lake Forney which covers 9205 hectares of land. It is one of the largest manmade lakes in north Texas which sits on the East fork of the Trinity River. The most popular attractions 21 are six parks, three marinas, and four boat ramps. Boat, kayak, canoe, and paddleboard rentals are available, and visitors can book the fishing spot.
                 </p>
             </div> 
