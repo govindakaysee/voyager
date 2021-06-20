@@ -13,8 +13,9 @@ export function LakeDis(){
     });
 
     return (
-        <div className = "Lakes-Description">
+        <div className = "main-content container">
         {eachLakeArr}
         </div>
+        
     );
 }

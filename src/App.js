@@ -11,7 +11,7 @@ function App() {
     const [ currPage, setCurrPage ] = useState("home");
 
     return (
-        <div className="App">
+        <div className="App main-container">
             <NavBar currPage={currPage} setCurrPage={setCurrPage} />
             {
                 currPage === "home"
@@ -22,6 +22,9 @@ function App() {
                             ? <About />
                             : <ContactUs />
             }
+            <footer className="site-footer">
+                &copy;Copyright Voyager Co.
+            </footer>
         </div>
     );
 }

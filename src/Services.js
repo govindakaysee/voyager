@@ -1,3 +1,7 @@
 export function Services(){
-    return <p>This is service page</p>;
+    return (
+        <div className="container main-content">
+            <p>This is service page</p>
+        </div>
+    );
 }
