@@ -1,6 +1,6 @@
 export function About(){
     return (
-        <div className = "container main-content">
+        <div>
             <h1>About US</h1>
             <h2>Who are we?</h2>
             <p>

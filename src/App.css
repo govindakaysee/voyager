@@ -2,6 +2,11 @@ p {
   text-align: justify;
 }
 
+a {
+  text-decoration: none;
+  color: unset;
+}
+
 .App {
   text-align: center;
 }
@@ -38,9 +43,14 @@ p {
 
 .nav-menu {
   display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.main-nav-menu {
+  display: flex;
   flex-direction: row;
   width: 80%;
-  margin-bottom: 50px;
   align-self: center;
 }
 
@@ -88,6 +98,16 @@ p {
   color: #dddddd;
   height: 60px;
   padding: 10px 20px;
+}
+
+.login-btn {
+  padding: 5px 10px;
+  background-color: teal;
+  width: 50px;
+}
+
+.login-btn:hover {
+  background-color: rgb(16, 155, 155);
 }
 
 @keyframes App-logo-spin {

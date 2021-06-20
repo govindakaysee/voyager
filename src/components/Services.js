@@ -1,6 +1,6 @@
 export function Services(){
     return (
-        <div className="container main-content">
+        <div>
             <p>This is service page</p>
         </div>
     );

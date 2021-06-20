@@ -1,4 +1,4 @@
-import {lakes} from "./data/lakes";
+import {lakes} from "../data/lakes";
 
 export function LakeDis(){
     const eachLakeArr = lakes.map(function InfoLake(lake){
@@ -13,9 +13,9 @@ export function LakeDis(){
     });
 
     return (
-        <div className = "main-content container">
-        {eachLakeArr}
-        </div>
+        <>
+            {eachLakeArr}
+        </>
         
     );
 }

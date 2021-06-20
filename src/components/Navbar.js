@@ -1,3 +1,5 @@
+import { Link } from 'wouter';
+
 import { NavBarItem } from './NavBarItem';
 
 const menus = [
@@ -22,18 +24,19 @@ const menus = [
 export function NavBar(props) {
     return (
         <nav className="nav-menu">
+            <div className="main-nav-menu">
             {
                 menus.map((menu) => {
                     return (
                         <NavBarItem 
                             menu={menu}
-                            setCurrPage={props.setCurrPage}
-                            currPage={props.currPage}
                             key={menu.name}
                         />
                     );
                 })
             }
+            </div>
+            <Link href="/login" className="login-btn">Login</Link>
         </nav>
     );
 }
