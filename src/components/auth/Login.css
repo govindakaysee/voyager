@@ -1,0 +1,35 @@
+.auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-container {
+    width: 300px;
+    box-shadow: 1px 0px 3px #333333;
+    padding: 10px
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form input {
+    margin-bottom: 10px;
+}
+
+.no-account-text {
+    color: blue;
+    cursor: pointer;
+}
+
+.no-account-text:hover {
+    color: rgb(0, 204, 255);
+    text-decoration: underline;
+}
+
+.auth-error {
+    color: red;
+    font-size: 0.6em;
+}
