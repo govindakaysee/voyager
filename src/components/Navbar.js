@@ -1,6 +1,5 @@
-import { Link } from 'wouter';
-
 import { NavBarItem } from './NavBarItem';
+import { LoginLogoutBtn } from './LoginLogoutBtn';
 
 const menus = [
     {
@@ -36,7 +35,7 @@ export function NavBar(props) {
                 })
             }
             </div>
-            <Link href="/login" className="login-btn">Login</Link>
+            <LoginLogoutBtn />
         </nav>
     );
 }

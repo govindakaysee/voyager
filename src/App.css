@@ -100,14 +100,25 @@ a {
   padding: 10px 20px;
 }
 
-.login-btn {
+.login-logout-btn {
   padding: 5px 10px;
-  background-color: teal;
   width: 50px;
+}
+
+.login-btn {
+  background-color: teal;
 }
 
 .login-btn:hover {
   background-color: rgb(16, 155, 155);
+}
+
+.logout-btn {
+  background-color: rgb(207, 61, 3);
+}
+
+.logout-btn:hover {
+  background-color: rgb(150, 51, 12);
 }
 
 @keyframes App-logo-spin {
