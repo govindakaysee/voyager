@@ -44,7 +44,6 @@ a {
 .nav-menu {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 50px;
 }
 
 .main-nav-menu {
@@ -121,6 +120,154 @@ a {
   background-color: rgb(150, 51, 12);
 }
 
+.lake-header {
+  text-align: left;
+}
+
+.lake-header h3 {
+  margin-bottom: -15px;
+  color: firebrick;
+  cursor: pointer;
+}
+
+.lake-image-container {
+  border: solid thin #222222;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.lake-image {
+  height: 300px;
+  width: 100%;
+  border-radius: inherit;
+}
+
+.lake-footer {
+  text-align: right;
+}
+
+.lake-explore-btn {
+  outline: none;
+  border: none;
+  padding: 8px 10px;
+  background-color: lightcoral;
+  cursor: pointer;
+}
+
+.lake-explore-btn:hover {
+  background-color: rgb(241, 155, 155);
+}
+
+.lake-explore-btn:active {
+  background-color: rgb(241, 95, 95);
+}
+
+.explore-container {
+  text-align: left;
+}
+
+.explore-container h2 {
+  color: indianred;
+  margin-bottom: -10px;
+  color: cadetblue;
+}
+
+.hotel-header {
+  text-align: left;
+}
+
+.hotel-header h3 {
+  margin-bottom: -10px;
+  color: firebrick;
+  cursor: pointer;
+}
+
+.hotel-body {
+  text-align: left;
+  line-height: 0.2;
+}
+.hotel-body table td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.hotel-body table  tr:nth-child(odd) {
+  background-color: #dddddd;
+}
+
+.hiking-header {
+  text-align: left;
+}
+
+.hiking-header h3 {
+  margin-bottom: -10px;
+  color: firebrick;
+  cursor: pointer;
+}
+
+.hiking-body {
+  text-align: left;
+  line-height: 0.2;
+}
+.hiking-body table td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.hiking-body table  tr:nth-child(odd) {
+  background-color: #dddddd;
+}
+
+.restaurant-header {
+  text-align: left;
+}
+
+.restaurant-header h3 {
+  margin-bottom: -10px;
+  color: firebrick;
+  cursor: pointer;
+}
+
+.restaurant-body {
+  text-align: left;
+}
+
+.restaurant-body table td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.restaurant-body table  tr:nth-child(odd) {
+  background-color: #dddddd;
+}
+
+.boat-header {
+  text-align: left;
+}
+
+
+.boat-header h3 {
+  margin-bottom: -10px;
+  color: firebrick;
+  cursor: pointer;
+}
+
+.boat-body {
+  text-align: left;
+  line-height: 0.2;
+}
+.boat-body table td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.boat-body table  tr:nth-child(odd) {
+  background-color: #dddddd;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

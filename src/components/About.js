@@ -1,7 +1,7 @@
 export function About(){
     return (
         <div>
-            <h1>About US</h1>
+            <h1>About Us</h1>
             <h2>Who are we?</h2>
             <p>
                 We are a non-profit organization whose sole motive is to help the local and non-local people who want to visit the places of dallas to get full and correct information within a same platform.

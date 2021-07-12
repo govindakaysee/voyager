@@ -7,7 +7,7 @@ export function NavBarItem({ menu }) {
     return (
         <Link
             className={`nav-item ${(!currPage && menu.name === "home") || currPage === menu.name ? "nav-item-selected"  : null }`}
-            href={menu.name}
+            href={`/${menu.name}`}
         >{menu.text}</Link>
     );
 }

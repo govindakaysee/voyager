@@ -36,13 +36,15 @@ export function Login() {
                         <h3>Login Form</h3>
                         <input
                             type="email"
-                            onChange={({ target }) => setEmail(target.value)}
+                            onChange={(e) => setEmail(e.target.value)}
                             placeholder="example@example.com"
+                            value={email}
                         />
                         <input
                             type="password"
-                            onChange={({ target }) => setPassword(target.value)}
+                            onChange={(e) => setPassword(e.target.value)}
                             placeholder="Enter password"
+                            value={password}
                         />
                         <input type="submit" value="Log In" />
                         {
@@ -53,6 +55,7 @@ export function Login() {
                     </form>
                     <Link href="/register">
                         <small className="no-account-text">Don't have an account? Create one. -&gt;</small>
+                        
                     </Link>
                 </div>
             </div>           

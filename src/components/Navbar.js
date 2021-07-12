@@ -7,10 +7,6 @@ const menus = [
         text: 'Home'
     },
     {
-        name: 'services',
-        text: 'Services',
-    },
-    {
         name: 'about',
         text: 'About',
     },

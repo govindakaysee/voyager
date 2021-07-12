@@ -1,16 +1,17 @@
 import './App.css';
 import { NavBar } from './components/Navbar';
-import { Services} from './components/Services';
 import { ContactUs } from './components/ContactUs';
 import { useEffect, useState } from 'react';
 import { About } from './components/About';
 import { LakeDis } from './components/LakeDis';
+import { Explore } from './components/Explore';
 
 import { Router, Route } from 'wouter';
 import firebase from 'firebase/app';
 import { firebaseConfig } from './config/firebase';
 import "firebase/auth";
 import { Login } from './components/auth/Login';
+
 
 import { AppContext } from './AppContext';
 
@@ -47,10 +48,12 @@ function App() {
                     <Router>
                         <Route path="/" component={LakeDis} />
                         <Route path="/home" component={LakeDis} />
-                        <Route path="/services" component={Services} />
                         <Route path="/about" component={About} />
                         <Route path="/contact" component={ContactUs} />
                         <Route path="/login" component={Login} />
+                        <Route path="/explore/:id">
+                            {params => <Explore lakeId={params.id} />}
+                        </Route>
                     </Router>
                 </div>
                 <footer className="site-footer">
