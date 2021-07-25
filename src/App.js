@@ -17,6 +17,8 @@ import { AppContext } from './AppContext';
 
 function App() {
     const [ isLoggedIn, setIsLoggedIn ] = useState(false);
+    const [ userEmail, setUserEmail ] = useState(null);
+
     useEffect(() => {
         if (!firebase.apps.length) {
             firebase.initializeApp(firebaseConfig);
@@ -25,23 +27,22 @@ function App() {
         }
         firebase.auth().onAuthStateChanged((user) => {
             if (user) {
-                // User is signed in, see docs for a list of available properties
-                // https://firebase.google.com/docs/reference/js/firebase.User
-                var uid = user.uid;
                 setIsLoggedIn(true);
-                console.log(`User ${uid} is logged in.`);
+                setUserEmail(user.email);
+                console.log(`User ${user.email} is logged in.`);
                 // ...
             } else {
                 // User is signed out
                 // ...
                 setIsLoggedIn(false);
+                setUserEmail(null);
                 console.log("User is not logged in.");
             }
         });
     }, []);
 
     return (
-        <AppContext.Provider value={{ isLoggedIn }}>
+        <AppContext.Provider value={{ isLoggedIn, username: userEmail }}>
             <div className="App main-container">
                 <NavBar />
                 <div className = "container main-content">

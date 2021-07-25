@@ -1,7 +1,24 @@
-import {lakes} from "../data/lakes";
+import { useContext, useEffect, useState } from "react";
+import firebase from "firebase";
+import { AppContext } from "../AppContext";
+import { Comments } from "./comments/Comments";
 
 export function Explore(props){
-    const lake = lakes.find(currLake => currLake.id === props.lakeId);
+    const [ lake, setLake ] = useState({});
+    const { isLoggedIn } = useContext(AppContext);
+
+    useEffect(() => {
+        const db = firebase.firestore();
+        db.collection("lakes").doc(props.lakeId).get()
+            .then(doc => {
+                if (doc.exists) {
+                    setLake(doc.data());
+                } else {
+                    console.log("No info on this lake.");
+                }
+            })
+            .catch(err => console.log(err));
+    }, [props.lakeId]);
 
     if (!lake) return <h2>Ooops! We don't have information on this lake.</h2>
 
@@ -132,6 +149,7 @@ export function Explore(props){
             {restaurantsArr.length ? restaurantsArr: <p>No restaurants near this area</p>}
             <h2>Boat Rentals</h2>
             {boatRentalArr.length ? boatRentalArr: <p>No boat rental near this area</p>}
+            { isLoggedIn ? <Comments lakeId={props.lakeId} /> : null }
         </div>
         
     );
