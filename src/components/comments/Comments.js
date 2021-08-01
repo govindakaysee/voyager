@@ -1,13 +1,15 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useContext, useEffect, useState } from 'react';
 import firebase from 'firebase';
 import { AddComment } from './AddComment';
 
 import "./comments.css";
 import { EachComment } from './EachComment';
 import { firebaseConfig } from '../../config/firebase';
+import { AppContext } from '../../AppContext';
 
 export function Comments({ lakeId }) {
     const [ prevComments, setPrevComments ] = useState([]);
+    const { isLoggedIn } = useContext(AppContext);
 
     const fetchFromFirebase = useCallback(() => {
         if (!firebase.apps.length) {
@@ -35,7 +37,7 @@ export function Comments({ lakeId }) {
     return (
         <div className="comments-container">
             <h2>Comments</h2>
-            <AddComment lakeId={lakeId} onAdded={fetchFromFirebase} />
+            { isLoggedIn ? <AddComment lakeId={lakeId} onAdded={fetchFromFirebase} /> : null }
             {
                 prevComments.length ? prevComments.map(comm => {
                     return <EachComment comment={comm} key={comm.commentId} />;

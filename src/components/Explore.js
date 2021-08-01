@@ -1,11 +1,9 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import firebase from "firebase";
-import { AppContext } from "../AppContext";
 import { Comments } from "./comments/Comments";
 
 export function Explore(props){
     const [ lake, setLake ] = useState({});
-    const { isLoggedIn } = useContext(AppContext);
 
     useEffect(() => {
         const db = firebase.firestore();
@@ -149,7 +147,7 @@ export function Explore(props){
             {restaurantsArr.length ? restaurantsArr: <p>No restaurants near this area</p>}
             <h2>Boat Rentals</h2>
             {boatRentalArr.length ? boatRentalArr: <p>No boat rental near this area</p>}
-            { isLoggedIn ? <Comments lakeId={props.lakeId} /> : null }
+            <Comments lakeId={props.lakeId} />
         </div>
         
     );
