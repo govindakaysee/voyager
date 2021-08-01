@@ -14,6 +14,7 @@ import { Login } from './components/auth/Login';
 
 
 import { AppContext } from './AppContext';
+import { Register } from './components/auth/Register';
 
 function App() {
     const [ isLoggedIn, setIsLoggedIn ] = useState(false);
@@ -52,6 +53,7 @@ function App() {
                         <Route path="/about" component={About} />
                         <Route path="/contact" component={ContactUs} />
                         <Route path="/login" component={Login} />
+                        <Route path="/register" component={Register} />
                         <Route path="/explore/:id">
                             {params => <Explore lakeId={params.id} />}
                         </Route>

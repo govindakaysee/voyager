@@ -10,13 +10,15 @@
     padding: 10px
 }
 
-.login-form {
+.auth-form {
     display: flex;
     flex-direction: column;
 }
 
-.login-form input {
+.auth-form input {
     margin-bottom: 10px;
+    padding: 5px 10px;
+    font-size: 1.1em;
 }
 
 .no-account-text {

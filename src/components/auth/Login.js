@@ -32,7 +32,7 @@ export function Login() {
         return (
             <div className= "auth-page">
                 <div className="auth-container">
-                    <form className= "login-form" onSubmit={handleOnSubmit}>
+                    <form className= "auth-form" onSubmit={handleOnSubmit}>
                         <h3>Login Form</h3>
                         <input
                             type="email"
