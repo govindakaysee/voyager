@@ -18,7 +18,9 @@ import { Register } from './components/auth/Register';
 
 function App() {
     const [ isLoggedIn, setIsLoggedIn ] = useState(false);
-    const [ userEmail, setUserEmail ] = useState(null);
+    const [ userDetails, setUserDetails ] = useState(null);
+    // const [ userEmail, setUserEmail ] = useState(null);
+    // const [ ]
 
     useEffect(() => {
         if (!firebase.apps.length) {
@@ -29,21 +31,33 @@ function App() {
         firebase.auth().onAuthStateChanged((user) => {
             if (user) {
                 setIsLoggedIn(true);
-                setUserEmail(user.email);
                 console.log(`User ${user.email} is logged in.`);
+
+                const db = firebase.firestore();
+                db.collection("users").doc(user.email).get()
+                .then((doc) => {
+                    if (doc.exists) {
+                        let usr = doc.data();
+                        setUserDetails(usr);
+                    } else {
+                        console.log("User details not found!");
+                    }
+                }).catch((err) => {
+                    console.log(err);
+                });
                 // ...
             } else {
                 // User is signed out
                 // ...
                 setIsLoggedIn(false);
-                setUserEmail(null);
+                setUserDetails(null);
                 console.log("User is not logged in.");
             }
         });
     }, []);
 
     return (
-        <AppContext.Provider value={{ isLoggedIn, username: userEmail }}>
+        <AppContext.Provider value={{ isLoggedIn, ...userDetails }}>
             <div className="App main-container">
                 <NavBar />
                 <div className = "container main-content">
