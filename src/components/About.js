@@ -13,44 +13,42 @@ export function About(){
             </div>
             <div>
                 <h2 style= {{'text-align':'center'}}>Our Team</h2>
-                <div className="row">
                     <div className="card">
-                        <img src="bg.jpg" alt="Govinda"  style= {{width:"100%"}}/>
+                        <img className= "profile-image" src="/images/kc.jpeg" alt="Govinda"  style= {{width:"20%"}}/>
                         <div className="container">
                             <h2>Govinda K.C.</h2>
-                            <p className="title">CEO & Founder</p>
-                            <p> Full Stack web developer.</p>
-                            <p>Govinda.kc@mavs.uta.edu</p>
-                        </div>
-                    </div>                     
-                </div>
+                            <p className="title">Developer and Designer</p>
+                            <p>Full Stack web developer.</p>
+                            <p>Email:Govinda.kc@mavs.uta.edu</p>
+                        </div>                 
+                    </div>
             </div>
             <div className="card">
-                <img src="bg.jpg" alt="Nabin"  style= {{width:"100%"}} />
+                <img className= "profile-image"src="/images/nabn.jpeg" alt="Nabin"  style= {{width:"20%"}} />
                 <div className="container">
                     <h2>Nabin Shrestha</h2>
-                    <p className="title">Developer</p>
-                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                    <p>Nabin.shrestha2@mavs.uta.edu</p>
+                    <p className="title">Developer & Designer</p>
+                    <p>Java Developer</p>
+                    <p>Email:Nabin.shrestha2@mavs.uta.edu</p>
                 </div>
             </div>
             <div className="card">
-                <img src="/images/bg.jpg" alt="Mahesh" style= {{width:"100%"}} />
+                <img className= "profile-image" src="/images/mahesh.jpeg" alt="Mahesh" style= {{width:"20%"}} />
                 <div className="container">
                     <h2>Mahesh Poudyal</h2>
                     <p className="title">Developer & Designer</p>
-                    <p>I am a Computer Science Major and I love to Travel.</p>
-                    <p>Mahesh.poudyal@mavs.uta.edu</p>
+                    <p>Web Developer and Graphic Designer.</p>
+                    <p>Email:Mahesh.poudyal@mavs.uta.edu</p>
                     
                 </div>
             </div>
             <div className="card">
-                <img src="bg.jpg" alt="Abhinandan" style= {{width :"100%"}} />
+                <img className= "profile-image" src="/images/abhi.jpeg" alt="Abhinandan" style= {{width :"30%"}} />
                 <div className="container">
                     <h2>Abhinandan Yadav</h2>
                     <p className="title">Developer & Designer</p>
                     <p>I am a computer science student with a solid background in the Full Stack java Developer.</p>
-                    <p>Abhinandan.yadav@mavs.uta.edu</p>
+                    <p>Email:Abhinandan.yadav@mavs.uta.edu</p>
                 </div>
             </div>
         </div>      

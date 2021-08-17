@@ -2,10 +2,18 @@ import React,{useContext, useState} from "react";
 import firebase from "firebase";
 import { AppContext } from "../../AppContext";
 import { firebaseConfig } from "../../config/firebase";
+import Popup from "./Popup";
+import addFile from "./addFile";
+
+var addfile = new addFile();
 
 export function  AddComment({ lakeId, onAdded }) {
+    var onformsubmit = addfile.onFormSubmit;
+    var onchange = addfile.onChange;
     const [ comment, setComment ] = useState ('');
     const { username } = useContext(AppContext);
+    const [buttonPopup, setButtonPopup] = useState(false);
+
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -49,7 +57,15 @@ export function  AddComment({ lakeId, onAdded }) {
                 ></textarea>
             </div>
             <div className="add-comment-footer">
-                <button className="add-comment-btn" type="submit">Add Comment</button>
+                <button className="add-comment-btn" type="submit" onClick={() => setButtonPopup(true)}>Add Comment</button>
+                <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+                <form onSubmit={onformsubmit}>
+                    <h1>File Upload</h1>
+                        <input type="file" onChange={onchange} />
+                    <button type="submit" >Upload</button>
+                    </form>
+
+                </Popup>
             </div>
         </form>
     )

@@ -17,6 +17,9 @@
   max-width: 800px;
   text-align: center;
 }
+.contact .contact-form .text h2{
+   color: #00bcd4;
+}
 .contact .content h2
 {
   font-size: 40px;
@@ -62,13 +65,15 @@
 {
   font-size: 16px;
   color: #ffffff;
-  flex-direction: column;
+  flex-direction:column;
   font-weight: 300;
 }
 .container .contactInfo .box .text h3
 {
   font-weight: 500;
   color: #00bcd4;
+  flex-direction:column;
+  position:static;
 }
 .contactForm
 {
